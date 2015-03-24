@@ -13,10 +13,12 @@ function OnMouseExit(){
 
 function OnMouseUp(){
 	if(isQuit == true){
+		Debug.Log("exitMain");
 		Application.Quit();
 	}
 	else{
-		Application.LoadLevel(0);
+		Debug.Log("loadLevel");
+		Application.LoadLevel(1);
 	}
 }
 
@@ -26,6 +28,9 @@ function Start () {
 }
 
 function Update () {
-	
+	if(Input.GetButtonDown("Jump")){
+	  Debug.Log ("exitMain");
+	  Application.Quit();
+	}
 }
 

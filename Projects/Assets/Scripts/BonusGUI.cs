@@ -12,7 +12,7 @@ public class BonusGUI : MonoBehaviour {
 	void Update () {
 		guiText.text = "Bonus left is : " + Bonus; 
 		if(Bonus == 0){
-			Application.LoadLevel(1);
+			Application.LoadLevel(0);
 		}
 	}
 }

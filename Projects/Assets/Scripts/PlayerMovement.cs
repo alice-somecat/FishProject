@@ -35,8 +35,13 @@ public class PlayerMovement : MonoBehaviour {
 			transform.Translate(0,translationUD,0);
 		}
 
-		if(transform.position.y <= -10 || transform.position.y >= 50){
+		if(transform.position.y <= -10 || transform.position.y >= 32){
 			transform.position = StartPos;
+		}
+
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			Application.LoadLevel(0);
+
 		}
 	}
 
